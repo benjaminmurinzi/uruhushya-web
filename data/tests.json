@@ -1,0 +1,38 @@
+[
+    {
+        "code": "K020",
+        "description_rw": "Isuzuma #K020: riteguye nk'ikizamini cy'uruhushya rw'agateganyo rwa Polisi.",
+        "description_en": "Test #K020: prepared as a police provisional license exam.",
+        "is_free": false
+    },
+    {
+        "code": "K019",
+        "description_rw": "Isuzuma #K019: riteguye nk'ikizamini cy'uruhushya rw'agateganyo rwa Polisi.",
+        "description_en": "Test #K019: prepared as a police provisional license exam.",
+        "is_free": false
+    },
+    {
+        "code": "K018",
+        "description_rw": "Isuzuma #K018: riteguye nk'ikizamini cy'uruhushya rw'agateganyo rwa Polisi.",
+        "description_en": "Test #K018: prepared as a police provisional license exam.",
+        "is_free": true
+    },
+    {
+        "code": "K017",
+        "description_rw": "Isuzuma #K017: riteguye nk'ikizamini cy'uruhushya rw'agateganyo rwa Polisi.",
+        "description_en": "Test #K017: prepared as a police provisional license exam.",
+        "is_free": false
+    },
+    {
+        "code": "K016",
+        "description_rw": "Isuzuma #K016: riteguye nk'ikizamini cy'uruhushya rw'agateganyo rwa Polisi.",
+        "description_en": "Test #K016: prepared as a police provisional license exam.",
+        "is_free": false
+    },
+    {
+        "code": "K015",
+        "description_rw": "Isuzuma #K015: riteguye nk'ikizamini cy'uruhushya rw'agateganyo rwa Polisi.",
+        "description_en": "Test #K015: prepared as a police provisional license exam.",
+        "is_free": false
+    }
+]
