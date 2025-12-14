@@ -1,0 +1,369 @@
+/* Results Page Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #F3F4F6;
+    color: #1F2937;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.results-header {
+    background: white;
+    padding: 20px 0;
+    border-bottom: 1px solid #E5E7EB;
+    margin-bottom: 40px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #3B82F6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.back-link:hover {
+    color: #2563EB;
+}
+
+/* ========================================
+   RESULTS SUMMARY
+   ======================================== */
+
+.results-summary {
+    padding: 40px 0;
+}
+
+.summary-card {
+    background: white;
+    border-radius: 16px;
+    padding: 48px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.summary-card.passed {
+    border-top: 4px solid #10B981;
+}
+
+.summary-card.failed {
+    border-top: 4px solid #EF4444;
+}
+
+.result-icon {
+    margin-bottom: 24px;
+}
+
+.result-icon svg {
+    color: #10B981;
+}
+
+.summary-card.failed .result-icon svg {
+    color: #EF4444;
+}
+
+.result-title {
+    font-size: 32px;
+    margin-bottom: 32px;
+    color: #1F2937;
+}
+
+.score-display {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.score-number {
+    font-size: 64px;
+    font-weight: 700;
+    color: #10B981;
+}
+
+.summary-card.failed .score-number {
+    color: #EF4444;
+}
+
+.score-percentage {
+    font-size: 32px;
+    font-weight: 600;
+    color: #6B7280;
+}
+
+.score-details {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-bottom: 32px;
+    padding: 24px;
+    background: #F9FAFB;
+    border-radius: 12px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.detail-label {
+    font-size: 13px;
+    color: #6B7280;
+}
+
+.detail-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1F2937;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: #3B82F6;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2563EB;
+}
+
+.btn-secondary {
+    background: white;
+    color: #3B82F6;
+    border: 2px solid #3B82F6;
+}
+
+.btn-secondary:hover {
+    background: #EFF6FF;
+}
+
+/* ========================================
+   ANSWER REVIEW
+   ======================================== */
+
+.answer-review {
+    padding: 40px 0 80px 0;
+}
+
+.answer-review h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+    color: #1F2937;
+}
+
+.answers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.answer-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    border-left: 4px solid #E5E7EB;
+}
+
+.answer-card.correct {
+    border-left-color: #10B981;
+    background: #F0FDF4;
+}
+
+.answer-card.incorrect {
+    border-left-color: #EF4444;
+    background: #FEF2F2;
+}
+
+.answer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.question-number {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6B7280;
+}
+
+.answer-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.answer-card.correct .answer-status {
+    color: #059669;
+}
+
+.answer-card.incorrect .answer-status {
+    color: #DC2626;
+}
+
+.question-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1F2937;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.question-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.question-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 2px solid #E5E7EB;
+}
+
+.options-review {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+}
+
+.option-item.selected.correct {
+    background: #D1FAE5;
+    border-color: #10B981;
+}
+
+.option-item.selected.incorrect {
+    background: #FEE2E2;
+    border-color: #EF4444;
+}
+
+.option-item.correct-answer {
+    background: #D1FAE5;
+    border-color: #10B981;
+}
+
+.option-letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #F3F4F6;
+    border-radius: 6px;
+    font-weight: 700;
+    color: #6B7280;
+    font-size: 14px;
+}
+
+.option-item.selected .option-letter {
+    background: #3B82F6;
+    color: white;
+}
+
+.option-text {
+    flex: 1;
+    font-size: 14px;
+    color: #1F2937;
+}
+
+.option-badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.your-answer {
+    background: #DBEAFE;
+    color: #1E40AF;
+}
+
+.correct-badge {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .summary-card {
+        padding: 32px 24px;
+    }
+    
+    .score-number {
+        font-size: 48px;
+    }
+    
+    .score-percentage {
+        font-size: 24px;
+    }
+    
+    .score-details {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -53,15 +53,15 @@ $tests = file_exists($tests_file) ? json_decode(file_get_contents($tests_file), 
         <div class="container">
             <!-- Tabs -->
             <div class="tabs">
-                <button class="tab active">
+                <a class="tab active" href="index.php">
                     <?php echo $current_lang === 'rw' ? 'Isuzumabumenyi' : 'Tests'; ?>
-                </button>
-                <button class="tab" disabled>
+                </a>
+                <a class="tab" href="lessons.php">
                     <?php echo $current_lang === 'rw' ? 'Amasomo' : 'Lessons'; ?>
-                </button>
-                <button class="tab" disabled>
+                </a>
+                <a class="tab" href="pricing.php">
                     <?php echo $current_lang === 'rw' ? 'Ibiciro' : 'Pricing'; ?>
-                </button>
+                </a>
             </div>
 
             <!-- Tests Grid -->
@@ -238,7 +238,7 @@ $tests = file_exists($tests_file) ? json_decode(file_get_contents($tests_file), 
                         </div>
                         <div>
                             <p><?php echo $current_lang === 'rw' ? 'Duhamagare cg WhatsApp kuri' : 'Call or WhatsApp'; ?></p>
-                            <a href="tel:+250791569555">+250 791 569 555</a>
+                            <a href="tel:+250789733274">+250 789 733 274</a>
                         </div>
                     </div>
                     
@@ -344,6 +344,24 @@ $tests = file_exists($tests_file) ? json_decode(file_get_contents($tests_file), 
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('registerModal')">&times;</button>
             <h2><?php echo $current_lang === 'rw' ? 'Iyandikishe' : 'Sign up'; ?></h2>
+            
+            <?php
+            if (isset($_GET['error'])) {
+                $errors = [
+                    'password_mismatch' => ($current_lang === 'rw' ? 'Passwords ntibatunganye' : 'Passwords do not match'),
+                    'password_short' => ($current_lang === 'rw' ? 'Password irashakwa kuba 6 ikarakatari kuri rusange' : 'Password must be at least 6 characters'),
+                    'email_exists' => ($current_lang === 'rw' ? 'Email iyo imaze gushyirwa imbere' : 'Email already registered'),
+                    'missing_fields' => ($current_lang === 'rw' ? 'Imibare yose irashakwa' : 'All fields are required'),
+                    'database_error' => ($current_lang === 'rw' ? 'Ikosa ryamakuru yarerekeranye' : 'Database error occurred'),
+                    'registration_failed' => ($current_lang === 'rw' ? 'Iyandikishe ntiryakomeye' : 'Registration failed')
+                ];
+                $error = $errors[$_GET['error']] ?? ($current_lang === 'rw' ? 'Ikosa ryabaye' : 'An error occurred');
+                echo "<div class='alert alert-danger' style='margin-bottom: 15px; padding: 10px; background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; border-radius: 4px;'>$error</div>";
+            }
+            if (isset($_GET['success'])) {
+                echo "<div class='alert alert-success' style='margin-bottom: 15px; padding: 10px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 4px;'>" . ($current_lang === 'rw' ? 'Iyandikishe ryakomeye! Injira na konti yawe' : 'Registration successful! Please log in') . "</div>";
+            }
+            ?>
             
             <form method="POST" action="auth/register-handler.php" class="modal-form">
                 <input type="hidden" name="user_type" value="student">

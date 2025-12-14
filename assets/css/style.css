@@ -819,3 +819,584 @@ body {
         font-size: 24px;
     }
 }
+/* ========================================
+   PAGE HERO (FOR LESSONS & PRICING)
+   ======================================== */
+
+.page-hero {
+    background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+    color: white;
+    padding: 80px 0 60px 0;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 42px;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.page-hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
+/* ========================================
+   LESSONS SECTION
+   ======================================== */
+
+.lessons-section,
+.pricing-section {
+    padding: 60px 0 80px 0;
+    background: #f3f4f6;
+}
+
+.lessons-section {
+    background: white;
+}
+
+.lessons-grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.lesson-card-modern {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 32px;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.lesson-card-modern:hover {
+    border-color: #2563eb;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+    transform: translateY(-4px);
+}
+
+.lesson-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.lesson-icon-large {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lesson-badge {
+    background: #2563eb;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.lesson-card-modern h3 {
+    font-size: 22px;
+    color: #1f2937;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.lesson-card-modern p {
+    color: #6b7280;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.lesson-features {
+    list-style: none;
+    margin-bottom: 24px;
+    padding: 0;
+}
+
+.lesson-features li {
+    padding: 8px 0;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+.lesson-features .check {
+    color: #10b981;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.btn-lesson-modern {
+    width: 100%;
+    padding: 14px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-lesson-modern:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.lessons-cta {
+    text-align: center;
+    margin-top: 80px;
+    padding: 48px;
+    background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+    border-radius: 16px;
+}
+
+.lessons-cta h2 {
+    font-size: 32px;
+    color: #1f2937;
+    margin-bottom: 12px;
+}
+
+.lessons-cta p {
+    font-size: 16px;
+    color: #6b7280;
+    margin-bottom: 24px;
+}
+
+/* ========================================
+   PRICING HERO
+   ======================================== */
+
+.pricing-hero {
+    background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+    color: white;
+    padding: 80px 0 60px 0;
+    text-align: center;
+}
+
+.pricing-hero h1 {
+    font-size: 42px;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.pricing-hero p {
+    font-size: 18px;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   PRICING SECTION WITH TABS
+   ======================================== */
+
+.pricing-section-modern {
+    padding: 60px 0 80px 0;
+    background: #f3f4f6;
+}
+
+.pricing-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.pricing-tab {
+    padding: 14px 48px;
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.pricing-tab:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+.pricing-tab.active {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: white;
+}
+
+.pricing-tab-content {
+    display: none;
+    animation: fadeInUp 0.5s ease;
+}
+
+.pricing-tab-content.active {
+    display: block;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   PRICING CARDS
+   ======================================== */
+
+.pricing-cards-modern {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-card-modern {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 40px 32px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card-modern:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
+}
+
+.pricing-card-modern.featured {
+    border-color: #2563eb;
+    border-width: 3px;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2563eb;
+    color: white;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.save-badge {
+    display: inline-block;
+    background: #10b981;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.plan-name {
+    font-size: 24px;
+    color: #1f2937;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.plan-price {
+    margin-bottom: 8px;
+}
+
+.price-amount {
+    font-size: 56px;
+    font-weight: 700;
+    color: #2563eb;
+    line-height: 1;
+}
+
+.price-currency {
+    font-size: 20px;
+    color: #6b7280;
+    margin-left: 4px;
+    font-weight: 400;
+}
+
+.plan-duration {
+    color: #6b7280;
+    font-size: 15px;
+    margin-bottom: 32px;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.plan-features li {
+    padding: 12px 0;
+    color: #4b5563;
+    font-size: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.icon-check {
+    color: #10b981;
+    font-weight: 700;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.btn-choose-plan {
+    width: 100%;
+    padding: 14px;
+    background: white;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: auto;
+}
+
+.btn-choose-plan:hover {
+    background: #eff6ff;
+    transform: translateY(-2px);
+}
+
+.btn-choose-plan.featured-btn {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.btn-choose-plan.featured-btn:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* ========================================
+   PAYMENT METHODS
+   ======================================== */
+
+.payment-methods-section {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.payment-methods-section h3 {
+    font-size: 22px;
+    color: #1f2937;
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+.payment-methods-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.payment-method {
+    padding: 14px 32px;
+    background: #f9fafb;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #1f2937;
+    font-size: 15px;
+}
+
+/* ========================================
+   PRICING FAQ
+   ======================================== */
+
+.pricing-faq {
+    margin-top: 80px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-faq h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #1f2937;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.faq-item {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    transition: all 0.3s;
+}
+
+.faq-item:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+}
+
+.faq-item h4 {
+    font-size: 18px;
+    color: #1f2937;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.faq-item p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ========================================
+   MAIN NAVIGATION
+   ======================================== */
+
+.main-nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s;
+    position: relative;
+    padding: 8px 0;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #dbeafe;
+}
+
+.main-nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: white;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 992px) {
+    .pricing-cards-modern {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+    
+    .lessons-grid-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+    
+    .pricing-hero h1,
+    .page-hero h1 {
+        font-size: 32px;
+    }
+    
+    .pricing-tabs {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .pricing-tab {
+        width: 100%;
+        padding: 12px 32px;
+    }
+    
+    .lessons-grid-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-cards-modern {
+        grid-template-columns: 1fr;
+    }
+    
+    .price-amount {
+        font-size: 48px;
+    }
+    
+    .payment-methods-grid {
+        flex-direction: column;
+    }
+    
+    .payment-method {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-hero h1,
+    .page-hero h1 {
+        font-size: 28px;
+    }
+    
+    .pricing-hero p,
+    .page-hero p {
+        font-size: 16px;
+    }
+    
+    .pricing-card-modern {
+        padding: 32px 24px;
+    }
+    
+    .lesson-card-modern {
+        padding: 24px;
+    }
+}
