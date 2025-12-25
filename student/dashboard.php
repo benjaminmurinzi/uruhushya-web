@@ -266,7 +266,11 @@ $subscription_days = 0; // TODO: Implement subscription
                 </li>
             </ul>
             
-            <button class="btn-choose-plan-dashboard" onclick="alert('Payment integration coming soon!')">
+            <button class="btn-choose-plan-dashboard" 
+                    onclick="initiatePayment(1, 500, '1 Day')"
+                    data-plan-id="1" 
+                    data-plan-price="500" 
+                    data-plan-name="1 Day">
                 <?php echo $current_lang === 'rw' ? 'Hitamo Gahunda' : 'Choose Plan'; ?>
             </button>
         </div>
@@ -304,7 +308,11 @@ $subscription_days = 0; // TODO: Implement subscription
                 </li>
             </ul>
             
-            <button class="btn-choose-plan-dashboard featured-btn" onclick="alert('Payment integration coming soon!')">
+            <button class="btn-choose-plan-dashboard featured-btn" 
+                    onclick="initiatePayment(2, 2000, '1 Week')"
+                    data-plan-id="2" 
+                    data-plan-price="2000" 
+                    data-plan-name="1 Week">
                 <?php echo $current_lang === 'rw' ? 'Hitamo Gahunda' : 'Choose Plan'; ?>
             </button>
         </div>
@@ -345,7 +353,11 @@ $subscription_days = 0; // TODO: Implement subscription
                 </li>
             </ul>
             
-            <button class="btn-choose-plan-dashboard" onclick="alert('Payment integration coming soon!')">
+            <button class="btn-choose-plan-dashboard" 
+                    onclick="alert('Payment integration coming soon!')"
+                    data-plan-id="3" 
+                    data-plan-price="5000" 
+                    data-plan-name="1 Month">
                 <?php echo $current_lang === 'rw' ? 'Hitamo Gahunda' : 'Choose Plan'; ?>
             </button>
         </div>
@@ -384,6 +396,9 @@ $subscription_days = 0; // TODO: Implement subscription
     </div>
 
     <script src="../assets/js/student-dashboard.js"></script>
+    <!-- Flutterwave Payment Integration -->
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+    <script src="../assets/js/flutterwave-payment.js"></script>
     <script>
         // Language toggle
         function toggleLanguage() {
@@ -410,5 +425,7 @@ $subscription_days = 0; // TODO: Implement subscription
             document.getElementById('subscriptionModal').style.display = 'none';
         }
     </script>
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+    <script src="../assets/js/flutterwave-payment.js"></script>
 </body>
 </html>

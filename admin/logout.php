@@ -1,18 +1,18 @@
 <?php
 session_start();
 
-// Clear all session data
+// Clear all session variables
 $_SESSION = array();
 
-// Destroy session cookie
+// Destroy the session cookie
 if (isset($_COOKIE[session_name()])) {
-    setcookie(session_name(), '', time()-3600, '/');
+    setcookie(session_name(), '', time() - 3600, '/');
 }
 
-// Destroy session
+// Destroy the session
 session_destroy();
 
-// Redirect to homepage
-header('Location: ' . SITE_URL . '/index.php?logged_out=1');
+// Redirect to home page
+header('Location: ../index.php');
 exit;
 ?>

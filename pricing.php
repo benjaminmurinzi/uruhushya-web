@@ -107,6 +107,14 @@ $is_logged_in = isLoggedIn();
                                 <span>Certificate on passing</span>
                             </li>
                         </ul>
+                        
+                        <button class="btn-choose-plan" 
+                                onclick="initiatePayment(1, 500, '1 Day')"
+                                data-plan-id="1" 
+                                data-plan-price="500" 
+                                data-plan-name="1 Day">
+                            <?php echo $current_lang === 'rw' ? 'Hitamo Gahunda' : 'Choose Plan'; ?>
+                        </button>
                     </div>
 
                     <!-- Card 2: 1 Week (Featured) -->
@@ -142,8 +150,12 @@ $is_logged_in = isLoggedIn();
                             </li>
                         </ul>
                         
-                        <button class="btn-choose-plan featured-btn" onclick="<?php echo $is_logged_in ? 'alert(\'Payment coming soon!\')' : 'openModal(\'loginModal\')'; ?>">
-                            Choose Plan
+                        <button class="btn-choose-plan featured-btn" 
+                                onclick="initiatePayment(2, 2000, '1 Week')"
+                                data-plan-id="2" 
+                                data-plan-price="2000" 
+                                data-plan-name="1 Week">
+                            <?php echo $current_lang === 'rw' ? 'Hitamo Gahunda' : 'Choose Plan'; ?>
                         </button>
                     </div>
 
@@ -182,6 +194,14 @@ $is_logged_in = isLoggedIn();
                                 <span>24/7 support</span>
                             </li>
                         </ul>
+                        
+                        <button class="btn-choose-plan" 
+                                onclick="initiatePayment(3, 5000, '1 Month')"
+                                data-plan-id="3" 
+                                data-plan-price="5000" 
+                                data-plan-name="1 Month">
+                            <?php echo $current_lang === 'rw' ? 'Hitamo Gahunda' : 'Choose Plan'; ?>
+                        </button>
                     </div>
 
                 </div>
@@ -501,5 +521,7 @@ $is_logged_in = isLoggedIn();
             }
         });
     </script>
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+    <script src="assets/js/flutterwave-payment.js"></script>
 </body>
 </html>
